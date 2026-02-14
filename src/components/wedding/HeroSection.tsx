@@ -69,7 +69,7 @@ const HeroSection = () => {
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 0.8 }}
         >
-          Vijaybarathi
+          Vijayabharathi
         </motion.h1>
 
         <motion.p
@@ -87,7 +87,7 @@ const HeroSection = () => {
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 1.6 }}
         >
-          DivyaBarathi
+          Divyabharathi
         </motion.h1>
 
         <motion.p

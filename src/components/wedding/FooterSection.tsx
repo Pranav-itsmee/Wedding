@@ -72,7 +72,7 @@ const FooterSection = () => {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1 }}
         >
-          Vijaybarathi & DivyaBarathi · 22 February 2026
+          Vijayabharathi & Divyabharathi · 22 February 2026
         </motion.p>
         
         {/* Decorative bottom elements */}
