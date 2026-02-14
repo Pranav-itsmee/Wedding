@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 96%;
+    --foreground: 25 30% 15%;
+
+    --card: 35 40% 95%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 30 50% 96%;
+    --popover-foreground: 25 30% 15%;
+
+    --primary: 38 65% 50%;
+    --primary-foreground: 35 40% 98%;
+
+    --secondary: 20 40% 90%;
+    --secondary-foreground: 25 30% 20%;
+
+    --muted: 30 25% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 340 30% 85%;
+    --accent-foreground: 340 40% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 30% 85%;
+    --input: 35 30% 85%;
+    --ring: 38 65% 50%;
+
+    --radius: 0.5rem;
+
+    /* Wedding custom tokens */
+    --gold: 38 72% 52%;
+    --gold-light: 40 60% 70%;
+    --gold-glow: 38 80% 60%;
+    --peach: 20 60% 90%;
+    --cream: 40 40% 95%;
+    --blush: 340 35% 88%;
+    --temple-brown: 25 35% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Floating petals */
+@keyframes float-petal {
+  0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg) translateX(80px); opacity: 0; }
+}
+
+@keyframes float-heart {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-30px) scale(1.1); opacity: 0.4; }
+  100% { transform: translateY(-60px) scale(0.8); opacity: 0; }
+}
+
+@keyframes golden-glow {
+  0%, 100% { text-shadow: 0 0 10px hsl(38 72% 52% / 0.3), 0 0 20px hsl(38 72% 52% / 0.15); }
+  50% { text-shadow: 0 0 20px hsl(38 72% 52% / 0.5), 0 0 40px hsl(38 72% 52% / 0.25), 0 0 60px hsl(38 72% 52% / 0.1); }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+@keyframes timer-glow {
+  0%, 100% { box-shadow: 0 0 8px hsl(38 72% 52% / 0.2); }
+  50% { box-shadow: 0 0 20px hsl(38 72% 52% / 0.4), 0 0 30px hsl(38 72% 52% / 0.15); }
+}
+
+@keyframes bell-swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+@keyframes pin-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+}
+
+.animate-petal {
+  animation: float-petal linear infinite;
+}
+
+.animate-golden-glow {
+  animation: golden-glow 3s ease-in-out infinite;
+}
+
+.animate-bounce-arrow {
+  animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+.animate-timer-glow {
+  animation: timer-glow 2s ease-in-out infinite;
+}
+
+.animate-bell-swing {
+  animation: bell-swing 2s ease-in-out infinite;
+}
+
+.animate-pin-bounce {
+  animation: pin-bounce 2s ease-in-out infinite;
+}
+
+.animate-float-heart {
+  animation: float-heart 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Kolam divider */
+.kolam-divider {
+  background-image: radial-gradient(circle, hsl(38 72% 52%) 1px, transparent 1px);
+  background-size: 12px 12px;
+  height: 12px;
+  opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(40 40% 95%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(38 65% 50% / 0.4);
+  border-radius: 3px;
+}
